@@ -1,3 +1,11 @@
+/*
+ * Main Stylesheet for the Naruto Editor (Window View)
+ *
+ * This stylesheet defines the visual layout and styling for the windowed editor view,
+ * including the title bar, menu bar, file explorer, and the code editor area.
+ * It uses a CSS Grid layout for the main container and various components.
+ */
+
 /*******************************
             GLOBALS 
 ********************************/
@@ -25,6 +33,7 @@ ul {
 
 /*******************************
           Title Bar 
+          Styles for the window title, buttons (minimize, maximize, close).
 ********************************/
 
 .titlebar {
@@ -51,6 +60,7 @@ ul {
 
 /*******************************
           Menu Bar 
+          Styles for the application menu (File, Edit, etc.) and submenus.
 ********************************/
 
 .menu-bar {
@@ -99,6 +109,7 @@ ul {
 
 /*******************************
           Code Editor 
+          Layout for the main editor area including explorer and text area.
 ********************************/
 
 .code-editor {
@@ -111,6 +122,7 @@ ul {
 
 /*******************************
             Explorer 
+            Styles for the file explorer side panel, including files, folders, and icons.
 ********************************/
 
 .explorer {
@@ -154,6 +166,7 @@ ul {
 
 /*******************************
               Editor 
+              Specific overrides for the CodeMirror editor instance.
 ********************************/
 
 #editor,

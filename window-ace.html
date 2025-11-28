@@ -56,15 +56,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js"></script>
     <!-- <script src="editor/mode/javascript/javascript.js"></script> -->
     <script>
-      var editor = ace.edit("editor", {
-        keyFoldings: true,
-      });
-      editor.setTheme(
-        "https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/theme-monokai.min.js"
-      );
-      editor.session.setMode(
-        "https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/mode-javascript.min.js"
-      );
+      /**
+       * Initializes the Ace Editor environment.
+       *
+       * This function configures the Ace editor instance, enabling key foldings,
+       * setting the theme to Monokai, and setting the mode to JavaScript.
+       * It loads the theme and mode from external CDNs.
+       *
+       * @function initializeAceEditor
+       * @returns {void} This function does not return a value.
+       */
+      function initializeAceEditor() {
+        var editor = ace.edit("editor", {
+          keyFoldings: true,
+        });
+        editor.setTheme(
+          "https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/theme-monokai.min.js"
+        );
+        editor.session.setMode(
+          "https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/mode-javascript.min.js"
+        );
+      }
+
+      initializeAceEditor();
     </script>
   </body>
 </html>

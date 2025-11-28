@@ -1,3 +1,11 @@
+/*
+ * Single File Editor Stylesheet
+ *
+ * This stylesheet is tailored for the "Single File" view of the Naruto Editor.
+ * It provides a simplified layout focusing on the editor and a status bar,
+ * without the complex file explorer or menu bar found in the main window view.
+ */
+
 /*******************************
             GLOBALS 
 ********************************/
@@ -25,6 +33,7 @@ ul {
 
 /*******************************
           Title Bar 
+          Styles for the simplified title bar.
 ********************************/
 
 .titlebar {
@@ -59,6 +68,9 @@ ul {
 
 /*******************************
           Code Editor 
+          Layout for the editor area.
+          Status Bar
+          Styles for the status bar at the bottom of the editor.
 ********************************/
 
 .code-editor {
@@ -82,6 +94,7 @@ ul {
 
 /*******************************
               Editor 
+              Specific overrides for the CodeMirror editor instance.
 ********************************/
 
 #editor,
