@@ -37,22 +37,36 @@
     <script src="editor/lib/codemirror.js"></script>
     <script src="editor/mode/javascript/javascript.js"></script>
     <script>
-      const editor = CodeMirror.fromTextArea(
-        document.getElementById("editor"),
-        {
-          lineNumbers: true,
-          mode: "javascript",
-          theme: "dracula",
-          lineWrapping: "wrap",
-        }
-      );
-      $(function () {
-        $(".explorer").resizable({
-          minWidth: 0,
-          maxWidth: $(".code-editor").width() - 200,
-          handles: "e",
+      /**
+       * Initializes the Single File Editor environment.
+       *
+       * This function configures the CodeMirror instance for the editor text area,
+       * applying the Dracula theme and JavaScript mode. It also attempts to initialize
+       * jQuery UI resizable functionality for the explorer pane.
+       *
+       * @function initializeSingleFileEditor
+       * @returns {void} This function does not return a value.
+       */
+      function initializeSingleFileEditor() {
+        const editor = CodeMirror.fromTextArea(
+          document.getElementById("editor"),
+          {
+            lineNumbers: true,
+            mode: "javascript",
+            theme: "dracula",
+            lineWrapping: "wrap",
+          }
+        );
+        $(function () {
+          $(".explorer").resizable({
+            minWidth: 0,
+            maxWidth: $(".code-editor").width() - 200,
+            handles: "e",
+          });
         });
-      });
+      }
+
+      initializeSingleFileEditor();
     </script>
   </body>
 </html>

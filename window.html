@@ -137,22 +137,37 @@
     <script src="editor/lib/codemirror.js"></script>
     <script src="editor/mode/javascript/javascript.js"></script>
     <script>
-      const editor = CodeMirror.fromTextArea(
-        document.getElementById("editor"),
-        {
-          lineNumbers: true,
-          mode: "javascript",
-          theme: "dracula",
-          lineWrapping: "wrap",
-        }
-      );
-      $(function () {
-        $(".explorer").resizable({
-          minWidth: 0,
-          maxWidth: $(".code-editor").width() - 200,
-          handles: "e",
+      /**
+       * Initializes the Window Editor environment.
+       *
+       * This function sets up the CodeMirror editor with specific configurations
+       * (JavaScript mode, Dracula theme, line wrapping). It also initializes the
+       * jQuery UI resizable functionality for the file explorer pane, allowing users
+       * to adjust the width of the explorer relative to the code editor.
+       *
+       * @function initializeWindowEditor
+       * @returns {void} This function does not return a value.
+       */
+      function initializeWindowEditor() {
+        const editor = CodeMirror.fromTextArea(
+          document.getElementById("editor"),
+          {
+            lineNumbers: true,
+            mode: "javascript",
+            theme: "dracula",
+            lineWrapping: "wrap",
+          }
+        );
+        $(function () {
+          $(".explorer").resizable({
+            minWidth: 0,
+            maxWidth: $(".code-editor").width() - 200,
+            handles: "e",
+          });
         });
-      });
+      }
+
+      initializeWindowEditor();
     </script>
   </body>
 </html>
